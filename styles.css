@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Archivo;
+  font-weight: 500;
+}
+
+#main-container {
+  min-width: 30rem;
+}
+
+#background-container {
+  background-image: url("https://images.pexels.com/photos/13820812/pexels-photo-13820812.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  min-height: 25rem;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  min-height: 5rem;
+  z-index: 1;
+}
+
+#nav-bar li {
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  transition: 0.7s;
+}
+
+#nav-bar li:hover {
+  transform: scale(110%);
+}
+
+#nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  background: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 6px;
+  transition: 1s ease;
+}
+
+#nav-bar.white ul {
+  background-color: white;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-form-nav {
+  display: flex;
+  align-items: center;
+}
+
+#search-bar-nav {
+  font-size: 16px;
+  padding: 10px 100px 10px 20px;
+  border: 1px solid rgb(0, 160, 129);
+  border-radius: 8px;
+  background-color: white;
+}
+
+#search-bar {
+  font-size: 18px;
+  padding: 13px 210px 13px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: lightgray;
+/*   z-index: 0; */
+}
+
+.search-icon {
+  width: 47px;
+  margin:0px;
+  background-color:rgb(0, 180, 129);
+  border: 1px solid rgb(0, 160, 129);
+  border-radius: 8px;
+  border-bottom-left-radius: 0px ;
+  border-top-left-radius: 0px ;
+  position: relative;
+  right: 47px;
+  transition: .2s;
+}
+
+.search-icon:hover {
+  filter: brightness(110%);
+  transform: scale(102%);
+}
+
+.search-icon-nav {
+  width: 32px;
+  margin:0px;
+  color: white;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px ;
+  border-top-left-radius: 0px ;
+  position: relative;
+  right: 34px;
+}
+
+input:focus {
+  outline-color: rgb(0, 160, 129);
+}
+
+::-webkit-input-placeholder {
+  text-align: left;
+  color: lightgray;
+  font-size: 16px;
+}
+#photo-container {
+  columns: 4;
+  margin-top: 20px;
+}
+
+ul button {
+  border: none;
+  border-radius: 6px;
+  padding: 18px 26px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s ease-in;
+}
+
+ul button:hover {
+  background-color: rgb(0, 160, 129);
+  color: white;
+  transform: scale(102%);
+}
+
+.logo {
+  width: 140px;
+  transition: .4s;
+}
+
+.logo:hover {
+  filter: brightness(110%);
+  transform: scale(102%);
+}
+
+.user-icon {
+  width: 38px;
+}
+
+.bell {
+  width: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.photo-div {
+  padding: 0px;
+}
+
+.photo-div img {
+width: 100%;  transition: 0.5s;
+}
+
+.photo-div img:hover {
+  transform: scale(102%);
+  opacity: 0.5;
+  filter: brightness(80%);
+}
+
+.photo-div a {
+  text-decoration: none;
+}
+
+.photo-info {
+  color: white;
+  font-size: 10px;
+  padding: 0px;
+  position: relative;
+  bottom: 28px;
+  left: 4px;
+  transition: 0.5s;
+}
+
+.photo-info:hover {
+  transform: scale(102%);
+  color: rgb(0, 160, 129);
+}
+
+.hide {
+  display: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  #main-container {
+    min-width: 20rem;
+  }
+
+  #nav-bar li {
+    display: none;
+  }
+
+  #nav-bar ul {
+    background: #0000004a;
+    justify-content: space-evenly;
+  }
+
+  #nav-bar.white ul {
+    background-color: white;
+  }
+
+  #search-bar {
+    padding: 12px 60px 12px 10px;
+    margin-left: 42px;
+  }
+  #search-bar-nav {
+    font-size: 14px;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid rgb(0, 160, 129);
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  #photo-container {
+    padding: 10px 40px;
+    columns: 2
+  }
+
+  ul button {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+    background-color: rgb(0, 160, 129);
+    color: black;
+  }
+
+  .logo {
+    width: 100px;
+  }
+  
+  #search-bar::-webkit-input-placeholder {
+    font-size: 16px;
+    color: white;
+  }
+  
+  #search-bar-nav::-webkit-input-placeholder {
+  text-content: none;
+  }
+  
+  .search-icon-nav {
+    width: 25px;
+  }
+}
